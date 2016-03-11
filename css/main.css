@@ -14,6 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
 }
 
 /*
@@ -45,6 +46,15 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}
+
+h3 {
+  text-align:left;
+  color:#CCC;
+  font-size:3.5em;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 /*
@@ -94,10 +104,383 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  font-family: sans-serif;
+  background-color: #252525;
+  font-family: 'Lato', sans-serif;
+  color:#AAA;
+
+}
+
+
+header {
+  background-color: #252525;
+  width: 100%;
+  min-height: 50px;
+  padding: 30px 0 10px 30px;
+  text-align: left;
+}
+
+a{
+  color:#FFF;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#CCC;
+
+}
+
+nav p {
+  color: #FFF;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* button styles */
+.button {
+  float: right;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	/*margin: 1em;*/
+  margin-top:-7px;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button > span {
+	vertical-align: middle;
+}
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+
+.button--size-m {
+	font-size: 16px;
+}
+
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.button--text-thin {
+	font-weight: 300;
+}
+
+.button--text-medium {
+	font-weight: 500;
+}
+
+.button--text-thick {
+	font-weight: 600;
+}
+
+.button--round-s {
+	border-radius: 5px;
+}
+
+.button--round-m {
+	border-radius: 15px;
+}
+
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+
+.button--border-medium {
+	border: 2px solid;
+}
+
+.button--border-thick {
+	border: 3px solid;
+}
+
+/* NINA */
+.button--nina {
+	padding: 0 2em;
+	background: #252525;
+	color: #fff;
+	overflow: hidden;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+.button--nina.button--inverted {
+	background: #fff;
+	color: #CCC;
+}
+.button--nina > span {
+	display: inline-block;
+	padding: 1em 0;
+	opacity: 0;
+	color: #fff;
+	-webkit-transform: translate3d(0, -10px, 0);
+	transform: translate3d(0, -10px, 0);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--nina::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1em 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--nina:hover {
+	background-color: #252525;
+}
+.button--nina:hover::before {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button--nina:hover > span {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--nina:hover > span:nth-child(1) {
+	-webkit-transition-delay: 0.045s;
+	transition-delay: 0.045s;
+}
+.button--nina:hover > span:nth-child(2) {
+	-webkit-transition-delay: 0.09s;
+	transition-delay: 0.09s;
+}
+.button--nina:hover > span:nth-child(3) {
+	-webkit-transition-delay: 0.135s;
+	transition-delay: 0.135s;
+}
+.button--nina:hover > span:nth-child(4) {
+	-webkit-transition-delay: 0.18s;
+	transition-delay: 0.18s;
+}
+.button--nina:hover > span:nth-child(5) {
+	-webkit-transition-delay: 0.225s;
+	transition-delay: 0.225s;
+}
+.button--nina:hover > span:nth-child(6) {
+	-webkit-transition-delay: 0.27s;
+	transition-delay: 0.27s;
+}
+.button--nina:hover > span:nth-child(7) {
+	-webkit-transition-delay: 0.315s;
+	transition-delay: 0.315s;
+}
+.button--nina:hover > span:nth-child(8) {
+	-webkit-transition-delay: 0.36s;
+	transition-delay: 0.36s;
+}
+
+.button--nina:hover > span:nth-child(9) {
+	-webkit-transition-delay: 0.405s;
+	transition-delay: 0.405s;
+}
+.button--nina:hover > span:nth-child(10) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+/* button*/
+
+nav a.right {
+  float: right;
+  margin-right: 30px;
+  font-size: 0.8em;
+  color: #CCC;
+  text-decoration: none;
+}
+
+nav a.right:hover {
+text-decoration: underline;
+}
+
+#description{
+  width: 50%;
+  padding: 0 30px 30px 0;
+}
+
+#description p.about{
+  font-size: 1.2em;
+  color: #CCC;
+}
+
+#description p.about-team{
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #AAA;
+}
+
+#xp {
+  padding-top:30px;
+  padding-bottom:120px;
+  width:100%;
+  position:relative;
+}
+
+#xp_gauche {
+  width:40%;
+  margin: 0px 0px 30px 30px;
+  float:left;
+}
+
+#xp_gauche p.sous-titre {
+  color: #FFF;
+  font-size: 1.5em;
+
+}
+
+#xp_droite {
+  margin: 0px 30px 30px 30px;
+}
+
+#xp_droite p.sous-titre {
+  color: #FFF;
+  font-size: 1.5em;
+
+}
 
 
 
+#conteneur{
+  background: #252525;
+  width: 100%;
+  margin-bottom: auto;
+}
 
+.img {
+    width: 20%;
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+    float: left;
+}
+
+
+
+.projets {
+  position: relative;
+  display: block;
+}
+
+.projets:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: none;
+
+}
+
+.img .coverimg{
+  width:100%;
+  height: 100%;
+}
+
+
+.projets:hover:after {
+    /*visibility: hidden;*/
+    /* opacity:0.5;*/
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 250ms ease-in-out;
+
+}
+
+.clear:after {
+  content: ""; /* Important, sinon l'élément n'est pas généré. */
+  display: table;
+  clear: both;
+}
+
+#page {
+  background: #2D2D2D;
+  padding-bottom:40px;
+}
+
+.visuel {
+  width: 90%;
+  height:auto;
+  display:block;
+  margin: 0 auto 0 auto;
+}
+
+.visuel-video {
+  width: 100%;
+  height:auto;
+  display:block;
+  margin-top:10px;
+
+}
+
+.visuel-end {
+  width: 90%;
+  height:auto;
+  display:block;
+  margin: 0 auto 50px auto;
+}
+
+.visuel .image-projet {
+  width:100%;
+  }
+
+  .visuel .icon-pdf {
+    width:10%;
+    height:auto;
+    display:block;
+    margin: 0 auto 50px auto;
+    }
+
+.icon-cv {
+      width:10%;
+      height:auto;
+      display:block;
+      margin: 0;
+      }
+
+
+.visuel-photo {
+      width: 100%;
+      height:auto;
+      display:block;
+      }
+.image-photo {
+      width:15%;
+      height:auto;
+      display:block;
+      margin: 0;
+        }
 
 
 
@@ -190,9 +573,108 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   @media only screen and (max-width: 2000px) {
+       /* Style adjustments for viewports that meet the condition */
+        .img {
+          width: 25%;
+        }
+   }
 
-@media only screen and (min-width: 35em) {
+   @media only screen and (max-width: 1539px) {
+       /* Style adjustments for viewports that meet the condition */
+       .img {
+           width: 33.33%;
+        }
+
+        #xp_gauche {
+          margin: 0px 60px 30px 30px;
+        }
+
+        .icon-cv {
+              width:15%;
+              }
+
+  .image-photo {
+    width:25%;
+    padding-left:40px;
+                    }
+
+
+       #description{
+         width: 90%;
+
+       }
+   }
+@media only screen and (max-width: 1078px) {
     /* Style adjustments for viewports that meet the condition */
+    .img {
+        width: 50%;
+      }
+
+      h3 {
+        font-size:2.5em;
+      }
+
+      #xp{
+        height:500px;
+      }
+
+      .icon-cv {
+            width:25%;
+            }
+
+
+.image-photo {
+              padding-left:40px;
+              padding-top:30px;
+                              }
+
+
+    #description{
+      display: none;
+
+    }
+    header {
+    padding: 30px 0 30px 30px;
+
+    }
+}
+@media only screen and (max-width: 640px) {
+    /* Style adjustments for viewports that meet the condition */
+    .img {
+        width: 100%;
+      }
+
+      #conteneur{
+        padding-top:50px;
+      }
+
+      .visuel .icon-pdf {
+        width:30%;
+      }
+
+      h3 {
+        text-align:center;
+        color:#CCC;
+        font-size:2em;
+      }
+      #xp{
+        height:430px;
+      }
+
+      #xp_gauche{
+width:90%;
+padding-right:20px;
+
+
+      }
+
+
+      .image-photo {
+        display:none;
+                                    }
+
+
 }
 
 @media print,
@@ -276,5 +758,6 @@ textarea {
     h2,
     h3 {
         page-break-after: avoid;
+
     }
 }
